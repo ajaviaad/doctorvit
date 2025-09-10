@@ -103,8 +103,3 @@ Run your usual cells: tokenization, `.generate(...)`, DuckDuckGo integration —
 
 ## 10) Security
 - Never commit model files or secrets to Git. Use private buckets and restricted IAM.
-- If you expose Jupyter publicly, **set a strong token/password**.
-
----
-
-**That’s it.** Your notebook stays **100% the same** except for the single `MODEL_PATH` line above.
