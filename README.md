@@ -1,15 +1,7 @@
 # DoctorVIT — Notebook‑Native Deployment (Hyperstack H200)
 
-**Goal:** Run your **exact notebook code** (no external APIs) on a Hyperstack **NVIDIA H200** box.  
-The only change you make inside the notebook: **the path to local model files** (weights/tokenizer/transformers). Everything else stays the same.
-
----
-
-## 0) What you get
-- **No OpenAI / no external LLM APIs** — pure local inference.
-- **Jupyter Lab** on your H200 machine so you run the **same notebook**.
-- Scripts to **sync your model from S3** to a local path (NVMe) and keep it hot in VRAM.
-- A minimal **conda + pip** environment with **PyTorch 2.3 (CUDA 12.1)** and **Transformers** pinned for stability.
+**Goal:** Run **notebook code** on Hyperstack **NVIDIA H200** box.  
+The only change needed inside the notebook is **the path to local model files** (weights/tokenizer/transformers). Everything else stays the same.
 
 ---
 
