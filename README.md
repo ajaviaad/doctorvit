@@ -68,7 +68,7 @@ Open `http://<h200-host>:8888` in your browser.
 
 ---
 
-## 7) Open YOUR existing notebook and change only the model path
+## 7) Open jupyter notebook and change only the model path
 Inside your notebook, change **only** the location of the model; keep everything else identical.
 
 ```python
