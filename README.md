@@ -7,7 +7,7 @@ Domains & TLS: **doctorvit.eu** with **GoDaddy** certificate (via Kubernetes TLS
 ## Patterns
 
 ### A) Transformers-Native Microservice (HTTP, internal schema)
-- Minimal FastAPI app exposes `/health` and `/generate` (simple JSON). Under the hood it calls **`AutoModelForCausalLM.generate`** exactly like your notebook.
+- Minimal FastAPI app exposes `/health` and `/generate` (simple JSON). Under the hood it calls **`AutoModelForCausalLM.generate`** exactly like jupyter notebook.
 - 1 GPU per pod; scale with HPA/KEDA; serves traffic via **Ingress** on `doctorvit.eu`.
 - Use when you want a service endpoint for apps/users.
 
