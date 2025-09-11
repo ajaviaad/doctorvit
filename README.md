@@ -1,4 +1,4 @@
-# DoctorVIT — Production Bundle
+# DoctorVIT — Production Ready Package
 
 This bundle contains **two production-safe patterns**, both **Transformers-native** using exact jupyter notebook `.generate(...)` code path and custom activation.
 
