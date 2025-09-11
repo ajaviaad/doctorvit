@@ -1,0 +1,38 @@
+
+image:
+  repository: doctorvit/api
+  tag: latest
+  pullPolicy: IfNotPresent
+
+worker:
+  repository: doctorvit/worker
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8000
+
+resources:
+  requests:
+    cpu: "500m"
+    memory: "1Gi"
+    nvidia.com/gpu: 1
+  limits:
+    cpu: "2"
+    memory: "4Gi"
+    nvidia.com/gpu: 1
+
+env:
+  REDIS_HOST: "doctorvit-redis"
+  REDIS_PORT: "6379"
+  PORT: "8000"
+
+nodeSelector: { }
+tolerations: [ ]
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 70
