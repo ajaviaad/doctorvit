@@ -17,7 +17,7 @@ Domains & TLS: **doctorvit.eu** with **GoDaddy** certificate (via Kubernetes TLS
 - Use when you want internal job-based scaling and zero external endpoints.
 
 ## TLS (GoDaddy)
-- Create a Kubernetes TLS secret `doctorvit-eu-tls` from your GoDaddy cert (see service/README.md).
+- Create a Kubernetes TLS secret `doctorvit-eu-tls` from GoDaddy cert (see service/README.md).
 
 ## S3 Weights
 - Both patterns sync your private model repo from **S3 → local NVMe** at pod start, then keep it resident in **VRAM**.
