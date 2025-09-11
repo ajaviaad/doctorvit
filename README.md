@@ -26,7 +26,3 @@ Domains & TLS: **doctorvit.eu** with **GoDaddy** certificate (via Kubernetes TLS
 - `service/` — Microservice (FastAPI), Docker, K8s (Ingress for doctorvit.eu).
 - `workers/` — Redis + RQ workers, K8s (Redis, Worker, optional KEDA ScaledObject), sample enqueuer.
 - `shared/k8s/` — Namespace + Secrets template (S3 + optional tokens).
-
----
-
-**Everything stays Transformers-native.** Your notebook code remains the source of truth; the server and workers call `.generate(...)` in the same way.
