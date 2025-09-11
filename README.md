@@ -1,6 +1,6 @@
-# DoctorVIT — Production Bundle (Both Patterns, No External LLM APIs)
+# DoctorVIT — Production Bundle
 
-This bundle contains **two production-safe patterns**, both **Transformers-native** using your exact `.generate(...)` code path and your custom activation. **No OpenAI, no external LLM APIs.**
+This bundle contains **two production-safe patterns**, both **Transformers-native** using your exact `.generate(...)` code path and custom activation.
 
 Domains & TLS: **doctorvit.eu** with your **GoDaddy** certificate (via Kubernetes TLS secret).
 
