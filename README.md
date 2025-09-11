@@ -1,4 +1,4 @@
-# DoctorVIT — Hyperstack H200 Production (doctorvit.eu)
+# DoctorVIT — Hyperstack H200 Production
 
 This scaffold is pre-configured to expose service at **https://doctorvit.eu** with Let's Encrypt TLS.
 
