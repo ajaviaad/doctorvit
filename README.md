@@ -229,7 +229,7 @@ Key sections:
 ## FAQ
 
 **Q: Do I have to change my notebook prompts?**  
-A: No. The adapter exports a `predict(payload)` function that calls your existing pipeline unchanged.
+A: No. The adapter exports a `predict(payload)` function that calls existing pipeline unchanged.
 
 **Q: Can I scale workers by queue depth?**  
 A: Yes—use KEDA with Redis Scaler. This chart ships CPU-based HPA by default.
