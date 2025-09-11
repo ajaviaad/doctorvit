@@ -1,0 +1,71 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: doctorvit-transformers-svc
+  namespace: doctorvit
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: doctorvit-transformers-svc
+  template:
+    metadata:
+      labels:
+        app: doctorvit-transformers-svc
+    spec:
+      containers:
+        - name: svc
+          image: REPLACE_WITH_REGISTRY/doctorvit-transformers-svc:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: MODEL_S3_URI
+              valueFrom:
+                secretKeyRef:
+                  name: doctorvit-s3
+                  key: MODEL_S3_URI
+            - name: MODEL_LOCAL_PATH
+              valueFrom:
+                secretKeyRef:
+                  name: doctorvit-s3
+                  key: MODEL_LOCAL_PATH
+            - name: AWS_REGION
+              valueFrom:
+                secretKeyRef:
+                  name: doctorvit-s3
+                  key: AWS_REGION
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: doctorvit-s3
+                  key: AWS_ACCESS_KEY_ID
+            - name: AWS_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: doctorvit-s3
+                  key: AWS_SECRET_ACCESS_KEY
+          volumeMounts:
+            - name: models
+              mountPath: /models
+          resources:
+            limits:
+              nvidia.com/gpu: 1
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 20
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 6
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 60
+            periodSeconds: 15
+            timeoutSeconds: 3
+            failureThreshold: 5
+      volumes:
+        - name: models
+          emptyDir: {}

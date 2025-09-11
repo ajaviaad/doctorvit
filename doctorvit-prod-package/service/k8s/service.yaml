@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: doctorvit-transformers-svc
+  namespace: doctorvit
+spec:
+  type: ClusterIP
+  selector:
+    app: doctorvit-transformers-svc
+  ports:
+    - name: http
+      port: 8000
+      targetPort: 8000
