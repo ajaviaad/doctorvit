@@ -1,4 +1,4 @@
-# DoctorVIT – Production Inference Service
+# DoctorVIT – Production Ready Package
 
 DoctorVIT is a production-ready scaffold for serving notebook-based ML inference via FastAPI with background processing through Celery + Redis. It runs locally with Docker Compose and deploys to Kubernetes with GPU workers, autoscaling, health checks, and metrics.
 
