@@ -238,4 +238,4 @@ A: Yes—use KEDA with Redis Scaler. This chart ships CPU-based HPA by default.
 
 ## License
 
-MIT (or your org’s standard license)
+© 2025 DoctorVIT. Proprietary and confidential. All rights reserved.
