@@ -1,6 +1,6 @@
 # DoctorVIT — Hyperstack H200 Production (doctorvit.eu)
 
-This scaffold is pre-configured to expose your service at **https://doctorvit.eu** with Let's Encrypt TLS.
+This scaffold is pre-configured to expose service at **https://doctorvit.eu** with Let's Encrypt TLS.
 
 ## Quick start
 
