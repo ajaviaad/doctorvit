@@ -1,6 +1,6 @@
 # DoctorVIT — Production Bundle
 
-This bundle contains **two production-safe patterns**, both **Transformers-native** using your exact `.generate(...)` code path and custom activation.
+This bundle contains **two production-safe patterns**, both **Transformers-native** using exact jupyter notebook `.generate(...)` code path and custom activation.
 
 Domains & TLS: **doctorvit.eu** with your **GoDaddy** certificate (via Kubernetes TLS secret).
 
